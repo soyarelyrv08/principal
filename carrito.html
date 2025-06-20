@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito - Alegría del Regalo</title>
+  <link rel="stylesheet" href="carrito.css" />
+  <script src="scriptt.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Carrito de Compras</h1>
+    <script>
+        // Aquí pegas el código JavaScript
+        fetch('tubasededatos.json')
+            .then(response => response.json())
+            .then(data => {
+                const contenedor = document.getElementById('miContenedor');
+                data.forEach(item => {
+                    const elemento = document.createElement('div');
+                    elemento.innerHTML = `<h2>${item.nombre}</h2><p>${item.descripcion}</p>`;
+                    contenedor.appendChild(elemento);
+                });
+            })
+            .catch(error => console.error('Error al cargar el JSON:', error));
+    </script>
+
+    <nav>
+      <a href="inicio.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+    </nav>
+  </header>
+
+  <main class="carrito-container">
+    <h2>Productos en tu carrito</h2>
+
+    <div id="productos-carrito">
+      <!-- Productos aparecerán aquí -->
+    </div>
+
+    <div id="total">
+      <h3>Total: $<span id="total-price">0.00</span></h3>
+      <button id="vaciar-btn">🗑️ Vaciar Carrito</button>
+    </div>
+
+    <section class="metodo-pago">
+      <h2>Método de Pago</h2>
+      <form id="formulario-pago">
+        <div class="campo">
+          <label for="metodo">Selecciona una opción:</label>
+          <select id="metodo" name="metodo">
+            <option value="tarjeta">Tarjeta de crédito/débito</option>
+            <option value="deposito">Depósito bancario</option>
+          </select>
+        </div>
+
+        <div id="pago-tarjeta" class="pago-opcion">
+          <div class="campo">
+            <label for="numero">Número de tarjeta</label>
+            <input type="text" id="numero" maxlength="16" required placeholder="1234 5678 9012 3456" />
+          </div>
+          <div class="campo">
+            <label for="nombre">Nombre en la tarjeta</label>
+            <input type="text" id="nombre" required placeholder="Juan Pérez" />
+          </div>
+          <div class="campo-group">
+            <div class="campo">
+              <label for="vencimiento">Vencimiento</label>
+              <input type="month" id="vencimiento" required />
+            </div>
+            <div class="campo">
+              <label for="cvv">CVV</label>
+              <input type="password" id="cvv" maxlength="4" required />
+            </div>
+          </div>
+        </div>
+
+        <div id="pago-deposito" class="pago-opcion oculto">
+          <p>Realiza tu depósito a:</p>
+          <p><strong>Banco:</strong> Banco Alegría</p>
+          <p><strong>Cuenta:</strong> 123456789012</p>
+          <p><strong>CLABE:</strong> 012345678901234567</p>
+        </div>
+
+        <button type="submit">💳 Realizar Pago</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Alegría del Regalo</p>
+  </footer>
+</body>
+
+</html>
+
+

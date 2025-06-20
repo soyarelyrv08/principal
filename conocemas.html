@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alegría del Regalo</title>
+  <link rel="stylesheet" href="conocemas.css">
+</head>
+<body>
+  <header>
+    <h1>Alegría del Regalo</h1>
+    <script>
+        // Aquí pegas el código JavaScript
+        fetch('basededatos.json')
+            .then(response => response.json())
+            .then(data => {
+                const contenedor = document.getElementById('miContenedor');
+                data.forEach(item => {
+                    const elemento = document.createElement('div');
+                    elemento.innerHTML = `<h2>${item.nombre}</h2><p>${item.descripcion}</p>`;
+                    contenedor.appendChild(elemento);
+                });
+            })
+            .catch(error => console.error('Error al cargar el JSON:', error));
+    </script>
+
+    <nav>
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="catalogo.html">Productos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="conocenos">
+      <h2>Conoce más sobre nuestra página</h2>
+      <p>
+        En <strong>Alegría del Regalo</strong> nos dedicamos a crear momentos especiales con detalles únicos.
+        Nuestra misión es ayudarte a regalar felicidad con estilo y creatividad. Con colores vibrantes y un toque de amor,
+        diseñamos productos personalizados para cada ocasión. ¡Gracias por acompañarnos!
+      </p>
+    </section>
+
+    <section class="galeria-videos">
+      <h2>Galería de Videos</h2>
+      <div class="videos-grid">
+        <iframe src="video.mp4" allowfullscreen></iframe>
+        <iframe src="VID-20250616-WA0014.mp4" allowfullscreen></iframe>
+        <iframe src="VID-20250616-WA0016.mp4" allowfullscreen></iframe>
+        <iframe src="VID-20250616-WA0017.mp4" allowfullscreen></iframe>
+        <iframe src="VID-20250616-WA0018.mp4" allowfullscreen></iframe>
+        <iframe src="VID-20250616-WA0019.mp4" allowfullscreen></iframe>
+        <iframe src="VID-20250616-WA0020.mp4" allowfullscreen></iframe>
+        <iframe src="VID-20250616-WA0021.mp4" allowfullscreen></iframe>
+        <iframe src="VID-20250616-WA0022.mp4" allowfullscreen></iframe>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Alegría del Regalo. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

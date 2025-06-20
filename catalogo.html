@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo - Alegría del Regalo</title>
+  <link rel="stylesheet" href="catalogo.css">
+  <script src="scriptt.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Catálogo de Productos</h1>
+    <script>
+        // Aquí pegas el código JavaScript
+        fetch('basededatos.json')
+            .then(response => response.json())
+            .then(data => {
+                const contenedor = document.getElementById('miContenedor');
+                data.forEach(item => {
+                    const elemento = document.createElement('div');
+                    elemento.innerHTML = `<h2>${item.nombre}</h2><p>${item.descripcion}</p>`;
+                    contenedor.appendChild(elemento);
+                });
+            })
+            .catch(error => console.error('Error al cargar el JSON:', error));
+    </script>
+
+    <nav>
+      <a href="inicio.html">Inicio</a>
+      <a href="carrito.html">Carrito</a>
+    </nav>
+  </header>
+  <main class="catalogo-container">
+    <div class="producto">
+      <img src="flor.jpg" alt="Rosas rojas y Astromelia">
+      <h2>Rosas rojas y Astromelia</h2>
+      <p>Ideal para cumpleaños o celebraciones especiales.</p>
+      <span>$320.00 MXN</span>
+      <button onclick="agregarAlCarrito('Rosas rojas y Astromelia', 320)">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="tasa.jpg" alt="Taza personalizada">
+      <h2>Taza Personalizada</h2>
+      <p>Agrega el nombre o frase que desees. Ideal para regalo.</p>
+      <span>$150.00 MXN</span>
+      <button onclick="agregarAlCarrito('Taza Personalizada', 150)">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="flor1.jpg" alt="Rosas rojas y corona">
+      <h2>Rosas rojas y corona</h2>
+      <p>Ideal para cumpleaños o celebraciones especiales.</p>
+      <span>$450.00 MXN</span>
+      <button onclick="agregarAlCarrito('Rosas rojas y corona', 450)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i5.jpg" alt="Caja Personalizada">
+      <h2>Caja Personalizada </h2>
+      <p>Feliz Cumpleaños
+        Rosas eternas + Snacks y GORRA NEW ERA.</p>
+      <span>$2000.00 MXN</span>
+      <button onclick="agregarAlCarrito('Caja Personalizada', 2000)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i3.jpg" alt="DUO DE LLAVEROS PERSONALIZADOS">
+      <h2>DUO DE LLAVEROS PERSONALIZADOS</h2>
+      <p>Un detalle tierno para cualquier ocasión especial.</p>
+      <span>$200.00 MXN</span>
+      <button onclick="agregarAlCarrito('DUO DE LLAVEROS PERSONALIZADOS', 200)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i4.jpg" alt="Caja explosiva MARVEL">
+      <h2>Caja explosiva MARVEL</h2>
+      <p>¡Sorprende con estilo! Ideal para regalar poder, acción y ternura en una sola explosión de creatividad.</p>
+      <span>$320.00 MXN</span>
+      <button onclick="agregarAlCarrito('Caja explosiva MARVEL', 320)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i1.jpg" alt="Ramo de Lotso dormilón">
+      <h2>Ramo de Lotso dormilón</h2>
+      <p>El regalo perfecto para enamorar o consentir: ramo con Lotso dormilón, dulzura y ternura en una sola sorpresa.</p>
+      <span>$480.00 MXN</span>
+      <button onclick="agregarAlCarrito('Ramo de Lotso dormilón', 480)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i2.jpg" alt="Paquete de fotos INTAX">
+      <h2>Paquete de fotos INTAX</h2>
+      <p>Ideal para sorprender con recuerdos reales y llenos de emoción.</p>
+      <span>$130.00 MXN</span>
+      <button onclick="agregarAlCarrito('Paquete de fotos INTAX', 130)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i6.jpg" alt="Ramo de 6 rosas eternas con temática de Caballo">
+      <h2>Ramo de 6 rosas eternas con temática de Caballo</h2>
+      <p>Un detalle original y sofisticado, ideal para quienes aman los caballos y los gestos que perduran.</p>
+      <span>$330.00 MXN</span>
+      <button onclick="agregarAlCarrito('Ramo de 6 rosas eternas con temática de Caballo', 330)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i7.jpg" alt="Camisita Personalizada">
+      <h2>Camisita Personalizada</h2>
+      <p>Camisita personalizada para pedir padrino de una forma única, divertida y emotiva. ¡Un recuerdo para toda la vida!</p>
+      <span>$430.00 MXN</span>
+      <button onclick="agregarAlCarrito('Camisita Personalizada', 430)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i8.jpg" alt="Portaretratos Personalizado">
+      <h2>Portaretratos Personalizado</h2>
+      <p>Tu historia, tu diseño.
+Disponible en varios tamaños y estilos. ¡Haz el tuyo único!.</p>
+      <span>$350.00 MXN</span>
+      <button onclick="agregarAlCarrito('Portaretratos Personalizado', 350)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i9.jpg" alt="Globo Personalizado">
+      <h2>Globo Personalizado</h2>
+      <p>Globo personalizado con nombre, frase o fecha especial.
+Ideal para cumpleaños, aniversarios o decoraciones únicas.</p>
+      <span>$200.00 MXN</span>
+      <button onclick="agregarAlCarrito('Globo Personalizado', 200)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i10.jpg" alt="Camisa Personalizada GIRLFRIEND">
+      <h2>Camisa Personalizada GIRLFRIEND</h2>
+      <p>Camisa personalizada con la palabra GIRLFRIEND o el diseño que tú elijas.
+Ideal para sesiones de fotos, regalos de pareja o simplemente marcar tendencia.</p>
+      <span>$420.00 MXN</span>
+      <button onclick="agregarAlCarrito('Camisa Personalizada GIRLFRIEND', 420)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i28.jpg" alt="Bolsa personalizada">
+      <h2>Bolsa personalizada</h2>
+      <p>Diseña una bolsa única con tu nombre, iniciales o una frase especial.</p>
+      <span>$180.00 MXN</span>
+      <button onclick="agregarAlCarrito('Bolsa personalizada', 180)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i12.jpg" alt="Ramo Eterno azul">
+      <h2>Ramo Eterno azul</h2>
+      <p>Un amor que no se marchita 💙
+Ramo de rosas preservadas en tonos azules, elegante y duradero.</p>
+      <span>$220.00 MXN</span>
+      <button onclick="agregarAlCarrito('Ramo Eterno azul', 220)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i13.jpg" alt="Ramito bonito">
+      <h2>Ramito bonito</h2>
+      <p>Un detalle simple, delicado y encantador.
+Ideal para alegrar el día o como complemento en un regalo más grande.</p>
+      <span>$490.00 MXN</span>
+      <button onclick="agregarAlCarrito('Ramito bonito', 490)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i14.jpg" alt="Canasta eterna de DALIAS">
+      <h2>Canasta eterna de DALIAS</h2>
+      <p>Elegancia y color que perduran.
+Dalias preservadas en una hermosa canasta decorativa.</p>
+      <span>$480.00 MXN</span>
+      <button onclick="agregarAlCarrito('Canasta eterna de DALIAS', 480)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i15.jpg" alt="Caja Personalizada para Madrina">
+      <h2>Caja Personalizada para Madrina</h2>
+      <p>Un detalle lleno de cariño para alguien muy especial.
+Incluye nombre, frase y decoración temática.</p>
+      <span>$350.00 MXN</span>
+      <button onclick="agregarAlCarrito('Caja Personalizada para Madrina', 350)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i16.jpg" alt="Letra V de rosas eternas con girasoles + míni corona y luz led">
+      <h2>Letra V de rosas eternas con girasoles + míni corona y luz led</h2>
+      <p>¡Un diseño único y lleno de vida!
+Letra decorativa con rosas eternas y girasoles reales preservados.</p>
+      <span>$250.00 MXN</span>
+      <button onclick="agregarAlCarrito('Letra V de rosas eternas con girasoles + míni corona y luz led', 250)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i17.jpg" alt="Ramo de limpiapipas">
+      <h2>Ramo de limpiapipas</h2>
+      <p>Creativo, colorido y ¡divertido!
+Detalles únicos o decoración fuera de lo común.</p>
+      <span>$200.00 MXN</span>
+      <button onclick="agregarAlCarrito('Ramo de limpiapipas', 200)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i18.jpg" alt="Ramo de Aniversario">
+      <h2>Ramo de Aniversario</h2>
+      <p>Celebra el amor con flores que lo dicen todo.
+Diseños personalizados con el número de años, nombres o frases especiales.</p>
+      <span>$500.00 MXN</span>
+      <button onclick="agregarAlCarrito('Ramo de Aniversario', 500)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i19.jpg" alt="Ramo de Rosas">
+      <h2>Ramo de Rosas Rojas</h2>
+      <p>Clásico, elegante, eterno.
+El ramo que nunca falla cuando el mensaje es amor.</p>
+      <span>$420.00 MXN</span>
+      <button onclick="agregarAlCarrito('Ramo de Rosas Rojas', 420)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i20.jpg" alt="Arreglo de rosas eternas + Snacks y peluche de Stich">
+      <h2>Arreglo de rosas eternas + Snacks y peluche de Stich</h2>
+      <p>¡Ternura total en una sola caja!</p>
+      <span>$420.00 MXN</span>
+      <button onclick="agregarAlCarrito('Arreglo de rosas eternas + Snacks y peluche de Stich', 420)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i21.jpg" alt="DESAYUNO SORPRESA MINI">
+      <h2>DESAYUNO SORPRESA MINI</h2>
+      <p>Pequeño en tamaño, grande en amor 💕
+Incluye jugo, snack dulce o salado, fruta y tarjetita personalizada.</p>
+      <span>$550.00 MXN</span>
+      <button onclick="agregarAlCarrito('DESAYUNO SORPRESA MINI', 550)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i22.jpg" alt="Placa Personalizada">
+      <h2>Placa Personalizada</h2>
+      <p>Tu mensaje, grabado para siempre.
+Frases, fotos, nombres o fechas especiales en una placa acrílica o de madera.</p>
+      <span>$400.00 MXN</span>
+      <button onclick="agregarAlCarrito('Placa Personalizada', 400)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i23.jpg" alt="Ramo de rosas naturales y diamantes incrustados, chocolates kinder delice con Oso de peluche">
+      <h2>Ramo de rosas naturales y diamantes incrustados, chocolates kinder delice con Oso de peluche</h2>
+      <p>El lujo se encuentra en cada detalle.
+Dulzura, Rosas frescas con toques brillantes y ternura en un solo paquete. que hacen tu regalo inolvidable.</p>
+      <span>$900.00 MXN</span>
+      <button onclick="agregarAlCarrito('Ramo de rosas naturales y diamantes incrustados, chocolates kinder delice con Oso de peluche', 900)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i24.jpg" alt="Ramo de Cervezas con rosas">
+      <h2>Ramo de Cervezas con rosas</h2>
+      <p>La combinación perfecta para celebrar: frescura y romanticismo.</p>
+      <span>$700 MXN</span>
+      <button onclick="agregarAlCarrito('Ramo de Cervezas con rosas', 700)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i25.jpg" alt="Caja personalizada de Spotify con código para escanear y foto">
+      <h2>Caja personalizada de Spotify con código para escanear y foto</h2>
+      <p>Regala música y recuerdos.</p>
+      <span>$400.00 MXN</span>
+      <button onclick="agregarAlCarrito('Caja personalizada de Spotify con código para escanear y foto', 400)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i26.jpg" alt="Rompecabezas Personalizado">
+      <h2>Rompecabezas Personalizado</h2>
+      <p>Arma momentos inolvidables.
+Diseña tu propio rompecabezas con fotos, frases o diseños únicos.
+Ideal para regalar y compartir en familia o pareja.
+</p>
+      <span>$400.00 MXN</span>
+      <button onclick="agregarAlCarrito('Rompecabezas Personalizado', 400)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i27.jpg" alt="Feliz cumpleaños 18, Arreglo de dulces con globo">
+      <h2>Feliz cumpleaños 18, Arreglo de dulces con globo</h2>
+      <p>Celebra la mayoría de edad con estilo.
+Productos especiales y personalizados para hacer de ese día algo único.</p>
+      <span>$420.00 MXN</span>
+      <button onclick="agregarAlCarrito('Feliz cumpleaños 18, Arreglo de dulces con globo', 420)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i29.jpg" alt="Caja Personalizada Rosas+Pastel+chocolates">
+      <h2>Caja Personalizada Rosas+Pastel+chocolates</h2>
+      <p>El combo perfecto para enamorar.
+Un regalo completo que combina flores frescas, un delicioso pastel y chocolates selectos.</p>
+      <span>$650.00 MXN</span>
+      <button onclick="agregarAlCarrito('Caja Personalizada Rosas+Pastel+chocolates', 650)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i30.jpg" alt="Ramo de Gerberas">
+      <h2>Ramo de Gerberas</h2>
+      <p>Colores vivos que iluminan el día.
+Gerberas frescas y vibrantes para regalar alegría y optimismo.</p>
+      <span>$690.00 MXN</span>
+      <button onclick="agregarAlCarrito('Ramo de Gerberas', 690)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i31.jpg" alt="Caja personalizada de HOT WHEELS">
+      <h2>Caja personalizada de HOT WHEELS</h2>
+      <p>Para los amantes de la velocidad y la colección.</p>
+      <span>$380.00 MXN</span>
+      <button onclick="agregarAlCarrito('Caja personalizada de HOT WHEELS', 380)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i32.jpg" alt="FELIZ CUMPLEAÑOS( caja con tenis y flores)">
+      <h2>FELIZ CUMPLEAÑOS( caja con tenis y flores)</h2>
+      <p>Un regalo moderno y chic.
+Combina estilo y naturaleza en un solo paquete para sorprender al cumpleañero.</p>
+      <span>$1000.00 MXN</span>
+      <button onclick="agregarAlCarrito('FELIZ CUMPLEAÑOS( caja con tenis y flores)', 1000)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i33.jpg" alt="Arreglo de rosas eternas con huevo kinder">
+      <h2>Arreglo de rosas eternas con huevo kinder</h2>
+      <p>El regalo que combina ternura y dulzura.
+Rosas eternas acompañadas de un clásico huevo Kinder para endulzar el día.</p>
+      <span>$370.00 MXN</span>
+      <button onclick="agregarAlCarrito('Arreglo de rosas eternas con huevo kinder', 370)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="i34.jpg" alt="Ramo de tulipanes">
+      <h2>Ramo de tulipanes</h2>
+      <p>Simplicidad y elegancia en cada flor.
+Tulipanes frescos para expresar amor y admiración con estilo.
+
+</p>
+      <span>$820.00 MXN</span>
+      <button onclick="agregarAlCarrito('Ramo de tulipanes', 820)">Agregar al carrito</button>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Alegría del Regalo</p>
+  </footer>
+</body>
+</html>
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ALEGRÍA DEL REGALO</title>
+  <link rel="stylesheet" href="alegriadelregalo.css" />
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"/>
+</head>
+
+<body>
+
+  <header class="hero">
+    <h1>ALEGRÍA DEL REGALO</h1>
+    <p class="subtitulo">Adornos, Regalos, Ramos, Recuerdos y más</p>
+    <script>
+        // Aquí pegas el código JavaScript
+        fetch('basededatos.json')
+            .then(response => response.json())
+            .then(data => {
+                const contenedor = document.getElementById('miContenedor');
+                data.forEach(item => {
+                    const elemento = document.createElement('div');
+                    elemento.innerHTML = `<h2>${item.nombre}</h2><p>${item.descripcion}</p>`;
+                    contenedor.appendChild(elemento);
+                });
+            })
+            .catch(error => console.error('Error al cargar el JSON:', error));
+    </script>
+
+    <nav>
+      <a href="inicio.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="carrito.html">Carrito</a>
+      <a href="conocemas.html">Conócenos</a>
+    </nav>
+  </header>
+
+  <section class="historia">
+    <h2>Nuestra Historia</h2>
+    <p>
+      Todo comenzó con una flor y una sonrisa.<br><br>
+      Una tarde cualquiera, con pocos recursos pero mucho corazón, nació <strong>Alegría del Regalo</strong>, un pequeño emprendimiento familiar con una gran misión: <em>crear momentos que no se olvidan</em>.
+      <br><br>
+      Inspirados por el amor, los detalles y la emoción de sorprender, empezamos haciendo ramos sencillos en casa para amigos y vecinos.  
+      Pronto descubrimos que no estábamos vendiendo solo productos... estábamos entregando sentimientos.
+      <br><br>
+      Con el tiempo, cada ramo, caja personalizada, desayuno sorpresa o arreglo con dulces se volvió parte de una historia única:  
+      una declaración de amor, un “gracias”, un “feliz cumpleaños” o simplemente un “estoy pensando en ti”.
+      <br><br>
+      Hoy, <strong>Alegría del Regalo</strong> es sinónimo de creatividad, personalización y cariño en cada entrega.  
+      Seguimos creciendo con la misma ilusión del primer día:  
+      💖 hacer sonreír a quien recibe y emocionar a quien regala.
+      <br><br>
+      Gracias por ser parte de nuestra historia.  
+      ✨ Que nunca falte un detalle… ni una sonrisa.
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Alegría del Regalo · Hecho con amor 💕
+  </footer>
+
+</body>
+</html>
+
+
+

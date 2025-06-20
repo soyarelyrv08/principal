@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alegría del Regalo - Inicio</title>
+  <link rel="stylesheet" href="inicio.css" />
+</head>
+<body>
+  <header>
+    <h1>ALEGRÍA DEL REGALO</h1>
+    <p>Detalles que alegran el corazón</p>
+    <img src="logo1.png" alt="Logo Alegría del Regalo" class="logo" />
+    <script>
+        // Aquí pegas el código JavaScript
+        fetch('basededatos.json')
+            .then(response => response.json())
+            .then(data => {
+                const contenedor = document.getElementById('miContenedor');
+                data.forEach(item => {
+                    const elemento = document.createElement('div');
+                    elemento.innerHTML = `<h2>${item.nombre}</h2><p>${item.descripcion}</p>`;
+                    contenedor.appendChild(elemento);
+                });
+            })
+            .catch(error => console.error('Error al cargar el JSON:', error));
+    </script>
+
+  </header>
+  <footer>
+    <p>📞 Teléfono: 427-141-2160</p>
+    <p>📍 Ubicación: San Juan del Río, Querétaro</p>
+    <div class="redes">
+      <a href="https://www.instagram.com/alegria_del_regalo" target="_blank">📸 Instagram</a> |
+      <a href="https://www.facebook.com/tu_facebook" target="_blank">📘 Facebook</a>
+    </div>
+  </footer>
+  <div class="boton-catalogo">
+    <a href="alegriadelregalo.html">🌟 Ir a la tienda</a>
+  </div>
+
+
+
+
+</body>
+</html>
+
+
