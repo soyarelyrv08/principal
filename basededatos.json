@@ -1,0 +1,184 @@
+[
+    {
+        "nombre_producto":"Rosas rojas y Astromelia",
+        "precio":"$320.00 ",
+        "codigo":"R46"
+    },
+    {
+         "nombre_producto":"Taza Personalizada",
+        "precio":"$150.00 ",
+        "codigo":"T54"
+  
+    },
+    {
+         "nombre_producto":"Rosas rojas y corona",
+        "precio":"$450.00 ",
+        "codigo":"L10"
+
+    },
+    {
+       "nombre_producto":"Caja Personalizada",
+        "precio":"$2000.00 ",
+        "codigo":"S33" 
+    },
+    {
+       "nombre_producto":"DUO DE LLAVEROS PERSONALIZADOS",
+        "precio":"$200.00  ",
+        "codigo":"N99"   
+    },
+    {
+        "nombre_producto":"Caja explosiva MARVEL",
+        "precio":"$320.00 ",
+        "codigo":"Q23"
+    },
+    {
+        "nombre_producto":"Ramo de Lotso dormilón",
+        "precio":"$480.00 ",
+        "codigo":"J98"
+    },
+    {
+        "nombre_producto":"Paquete de fotos INTAX",
+        "precio":"$130.00 ",
+        "codigo":"G66"
+    },
+    {
+         "nombre_producto":"Ramo de 6 rosas eternas con temática de Caballo",
+        "precio":"$330.00 ",
+        "codigo":"Y77"
+    },
+    {
+        "nombre_producto":"Camisita Personalizada",
+        "precio":"$430.00 ",
+        "codigo":"H56"
+    },
+    {
+        "nombre_producto":"Portaretratos Personalizado",
+        "precio":"$350.00  ",
+        "codigo":"A21"
+    },
+    {
+        "nombre_producto":"Globo Personalizado",
+        "precio":"$200.00 ",
+        "codigo":"D44"
+    },
+    {
+        "nombre_producto":"Camisa Personalizada GIRLFRIEND",
+        "precio":"$420.00 ",
+        "codigo":"K95"
+    },
+    {
+         "nombre_producto":"Bolsa personalizada",
+        "precio":"$180.00 ",
+        "codigo":"S22"
+    },
+    {
+        "nombre_producto":"Ramo Eterno azul",
+        "precio":"$220.00",
+        "codigo":"C30"
+    },
+    {
+         "nombre_producto":"Ramito bonito",
+        "precio":"$490.00 ",
+        "codigo":"X40"
+    },
+    {
+       "nombre_producto":"Canasta eterna de DALIAS",
+        "precio":"$480.00 ",
+        "codigo":"V67"  
+    },
+    {
+         "nombre_producto":"Caja Personalizada para Madrina",
+         "precio":"$350.00 ",
+         "codigo":"Z00"    
+    },
+    {
+       "nombre_producto":"Letra V de rosas eternas con girasoles + míni corona y luz led",
+         "precio":"$250.00  ",
+         "codigo":"W11"  
+    },
+    {
+       "nombre_producto":"Ramo de limpiapipas",
+         "precio":"$200.00 ",
+         "codigo":"S41"   
+    },
+    {
+        "nombre_producto":"Ramo de Aniversario",
+         "precio":"$500.00",
+         "codigo":"L98"
+    },
+    {
+       "nombre_producto":"Ramo de Rosas Rojas",
+         "precio":"$420.00",
+         "codigo":"W89" 
+    },
+    {
+       "nombre_producto":"Arreglo de rosas eternas + Snacks y peluche de Stich",
+         "precio":"$420.00",
+         "codigo":"E15" 
+    },
+    {
+        "nombre_producto":"DESAYUNO SORPRESA MINI",
+         "precio":"$550.00",
+         "codigo":"J75"
+    },
+    {
+        "nombre_producto":"Placa Personalizada",
+         "precio":"$400.00",
+         "codigo":"H27"
+    },
+    {
+        "nombre_producto":"Ramo de rosas naturales y diamantes incrustados, chocolates kinder delice con Oso de peluche",
+         "precio":"$900.00 ",
+         "codigo":"X50"
+    },
+    {
+        "nombre_producto":"Ramo de Cervezas con rosas",
+         "precio":"$700.00 ",
+         "codigo":"A89"
+    },
+    {
+       "nombre_producto":"Caja personalizada de Spotify con código para escanear y foto",
+         "precio":"$400.00 ",
+         "codigo":"W49" 
+    },
+    {
+        "nombre_producto":"Rompecabezas Personalizado",
+         "precio":"$400.00 ",
+         "codigo":"F08"
+    },
+    {
+        "nombre_producto":"Feliz cumpleaños 18, Arreglo de dulces con globo",
+         "precio":"$420.00 ",
+         "codigo":"G98"
+    },
+    {
+       "nombre_producto":"Caja Personalizada Rosas+Pastel+chocolateso",
+         "precio":"$650.00 ",
+         "codigo":"R61" 
+    },
+    {
+       "nombre_producto":"Ramo de Gerberas",
+         "precio":"$690.00  ",
+         "codigo":"Q94" 
+    },
+    {
+        "nombre_producto":"Caja personalizada de HOT WHEELS",
+         "precio":"$380.00  ",
+         "codigo":"K22" 
+    },
+    {
+         "nombre_producto":"FELIZ CUMPLEAÑOS( caja con tenis y flores)",
+         "precio":"$1000.00 ",
+         "codigo":"O85" 
+    },
+    {
+        "nombre_producto":"Arreglo de rosas eternas con huevo kinder",
+         "precio":"$370.00",
+         "codigo":"U56"
+    },
+    {
+       "nombre_producto":"Ramo de tulipanes",
+         "precio":"$820.00",
+         "codigo":"D63" 
+    }
+]
